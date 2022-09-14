@@ -1,51 +1,62 @@
-<section class="min-vh-100" id="main">
+<section  class="min-vh-100" id="checkoutGiftcard">
+
+<div class="row">
+    <div class="col-12">
+        <div class="w3-top" id="myNavbar">
+     
+                  <div class=" w-100" id="myNavbar3">
+                  <div class="w3-bar w3-center w3-small" style="background-color: transparent!important;">
+                  <label  id="user" class="w3-bar-item  "  style="background-color: transparent!important;" ></label>
+                  <a  id="btnGiftcards"  class="w3-bar-item" style="background-color: transparent!important;" ></a>
+                  <label  id="lblMyNav2"class="w3-bar-item " style="background-color: transparent!important;" ></label>
+                  <a  class="" routerLink='/home' ><img src="https://res.cloudinary.com/dzyvb836r/image/upload/v1663035560/HOME_e3y8o7.png" id="icoHome"></a>
+
+                </div>
+              </div>
+              </div>
+    </div>
+   
+  </div>
+
+
+
+
+
+
 
 <!-- Page Content -->
-<div class="min-vh-100" id="">
+<div class="" >
   <!-- Header/Home -->
-  <div class="min-vh-100 w3-padding-32 w3-center w3-black" id="home" >
+  <div class=" " id="home" >
 
-    <!--<i class="fa-solid fa-hat-cowboy"></i>-->
-    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span>
+   <div class="container ">
+ 
+			<form class="text-center " #giftcardForm="ngForm" (ngSubmit)="checkout(giftcardForm)" id="formMP">
 
-      <img
-        width="100"
-        alt="Torito Logo"
-        src="https://res.cloudinary.com/dzyvb836r/image/upload/v1644816267/brand_gp5nbj.png"
-      ></h1>
-    <p>Burgers & Beers</p>
-    <div class="col-sm-12 " >
-
-
-
-<div class="login min-vh-100" id="checkoutGiftcard">
-
-
-			<form class="" #giftcardForm="ngForm" (ngSubmit)="checkout(giftcardForm)" id="formMP">
-
-				<div class="row justify-content-center m-2 p-4" id="rowGiftcard">
-				<div class="card m-2 p-4" style="width: 18rem;background-color: rgba(0, 0, 0, 0.5);color: white;">
+				<div class="row justify-content-center" id="rowGiftcard" >
+				<div class="card m-2" id="card">
+					<p class="card-title text-center m-1 p-1"><b> COMPRADOR</b></p>
 				  
-				  <div class="card-body">
-				    <h5 class="card-title"><b> <i class='fas fa-wallet'></i> Comprador</b></h5><br>
+				  <div class="card-body ">
 				    
-				    	<label for="buyerName">Nombre: </label><br>
-				<input type="text" name="buyerName" #buyerName="ngModel" [(ngModel)]="giftcard.buyerName" required />
-				<br>
+				    
+				    	<label for="buyerName">NOMBRE: </label><br>
+				<input class="form-control" type="text" name="buyerName" #buyerName="ngModel" [(ngModel)]="giftcard.buyerName" required />
+				
 				<!--[(ngModel)]="project.name" 2 ways data binding para modificar el atributo name del project-->
 				<!-- el # indica que es la identificacion para Angular-->
 				<span class="form_error" *ngIf="buyerName.touched && !buyerName.valid">El nombre es
-					obligatorio</span><br>
+					obligatorio</span>
 
-					<label for="buyerEmail" id="giftcardForm2">E-mail:</label><br>
-    								<input type="text" name="buyerEmail" #buyerEmail="ngModel"
-    									[(ngModel)]="giftcard.buyerEmail" required /><br>
-    								<span class="form_error" *ngIf="buyerEmail.touched && !buyerEmail.valid">El e-mail es obligatorio</span><br>
+					<label for="buyerEmail" id="giftcardForm2">E-MAIL:</label><br>
+    								<input class="form-control" type="text" name="buyerEmail" #buyerEmail="ngModel"
+    									[(ngModel)]="giftcard.buyerEmail" required />
+    								<span class="form_error" *ngIf="buyerEmail.touched && !buyerEmail.valid">El e-mail es obligatorio</span>
 
-				<label for="amount"> Monto en $:</label><br>
-				<input type="number" name="amount" #amount="ngModel" [(ngModel)]="giftcard.amount" required />
+				<label for="amount"> MONTO EN $:</label><br>
+				<input type="number" class="form-control" name="amount" #amount="ngModel" [(ngModel)]="giftcard.amount" required />
 				<!-- --><br>
-				<span class="form_error" *ngIf="amount.touched && amount.pristine">El monto es obligatorio.</span><br>
+				<span class="form_error" *ngIf="amount.touched && amount.pristine">El monto es obligatorio.</span>
 
 
 				  </div>
@@ -53,127 +64,62 @@
 
 
 
-					<div class="card m-2 p-4" style="width: 18rem;background-color: rgba(0, 0, 0, 0.5);color: white;">
-				  
-				  <div class="card-body">
-				    <h5 class="card-title"><b><i class='fa fa-gift'></i> Destinatario</b></h5><br>
-				    <label for="client">Nombre:</label><br>
-				<input type="text" name="client" #client="ngModel" [(ngModel)]="giftcard.client" required /><br>
- 				
- 				<span class="form_error" *ngIf="client.touched && !client.valid">El destinatario es obligatorio</span><br>
-
- 				<label for="emailClient">E-mail:</label><br>
-    								<input type="text" name="emailClient" #emailClient="ngModel"
-    									[(ngModel)]="giftcard.emailClient" required /><br>
-    								<span class="form_error" *ngIf="emailClient.touched && !emailClient.valid">El email del destinatario es obligatorio</span><br>
-
-
-
-    		<!--<label for="dni">Dni:</label><br>
-    								<input type="number" name="dni" #dni="ngModel" [(ngModel)]="giftcard.dni" 
-    									min="1000000" /><br>
-    								<span class="form_error" *ngIf="dni.touched && !dni.valid">El dni del cliente /
-    				 					agasajado está incompleto o no es válido</span><br>-->
-					
-					
-
-						<label for="phoneClient">Teléfono: </label><br>
-    								<input type="number" name="phoneClient" #phoneClient="ngModel"
-    									[(ngModel)]="giftcard.phoneClient" required min="1000000000" /><br>
-    								<span class="form_error" *ngIf="phoneClient.touched && !phoneClient.valid">El teléfono
-    									del cliente está incompleto o no es válido</span><br>
+					<div class="card m-2 " id="card">
+				  <p class="card-title m-1 p-1"><b> DESTINATARIO</b></p> 
+				  <div class="card-body" id="cardBody">
 				    
-				  </div>
-				</div></div>
+				    <label for="client">NOMBRE:</label>
+				<input type="text" class="form-control" name="client" #client="ngModel" [(ngModel)]="giftcard.client" required />
+ 				
+ 				<span class="form_error" *ngIf="client.touched && !client.valid">El destinatario es obligatorio</span>
 
-<div class="row justify-content-center m-2 " id="">
-	<p class="card-text">Revisa los datos que estén correctos. <br>El destinario será notificado vía e-mail.</p>
-	</div>
+ 				<label for="emailClient">E-MAIL:</label>
+    								<input class="form-control" type="text" name="emailClient" #emailClient="ngModel"
+    									[(ngModel)]="giftcard.emailClient" required />
+    								<span class="form_error" *ngIf="emailClient.touched && !emailClient.valid">El email del destinatario es obligatorio</span>
 
-<div class="row justify-content-center m-2 p-4" id="">
-				<div class="card m-2 p-4" style="width: 18rem;background-color: rgba(0, 0, 0, 0.5);color: white;">
-				  
-				  <div class="card-body">
-				   
-				   <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop1"><i class='fa fa-shopping-cart'></i><!--<i class='fa fa-shopping-basket'></i>--> Comprar </button>
+						<label for="phoneClient">TELÉFONO: </label><br>
+    								<input class="form-control" ty0pe="number" name="phoneClient" #phoneClient="ngModel"
+    									[(ngModel)]="giftcard.phoneClient" required min="1000000000" /><br>
+    								<span class="form_error" *ngIf="phoneClient.touched && !phoneClient.valid">El teléfono del destinatario es obligatorio</span>
 				    
 				  </div>
 				</div>
+			</div>
+
+
+<div class="row justify-content-center m-1 p-2" id="">
+				  <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#staticBackdrop1" 
+				  id="btnCheckout"><i class='fa fa-shopping-cart' ></i><!--<i class='fa fa-shopping-basket'></i>--> Comprar </button>
+				
 
 				</div>
 
-				<!--<label>PASO 1</label><br><br>-->
-
-				<!--<label for="buyerName">Tú Nombre / Comprador</label><br>
-				<input type="text" name="buyerName" #buyerName="ngModel" [(ngModel)]="giftcard.buyerName" required />
-				<br>-->
-				<!--[(ngModel)]="project.name" 2 ways data binding para modificar el atributo name del project-->
-				<!-- el # indica que es la identificacion para Angular-->
-				<!--<span class="form_error" *ngIf="buyerName.touched && !buyerName.valid">El nombre es
-					obligatorio</span><br>
-
-					<label for="buyerEmail" id="giftcardForm2">Tú Email:</label><br>
-    								<input type="text" name="buyerEmail" #buyerEmail="ngModel"
-    									[(ngModel)]="giftcard.buyerEmail" required /><br>
-    								<span class="form_error" *ngIf="buyerEmail.touched && !buyerEmail.valid">El e-mail es obligatorio</span><br>
-
-				<label for="amount"> Monto en $.</label><br>
-				<input type="number" name="amount" #amount="ngModel" [(ngModel)]="giftcard.amount" required />
-				<br>
-				<span class="form_error" *ngIf="amount.touched && amount.pristine">El monto es obligatorio.</span><br>
-
-				<label for="issuedDate"> Fecha de compra</label><br>
-				<input type="date" name="issuedDate" #issuedDate="ngModel" [(ngModel)]="giftcard.issuedDate"
-					required /><br>
-				<span class="form_error" *ngIf="issuedDate.touched && !issuedDate.valid">La fecha de compra es
-					obligatoria.</span><br>-->
-
 				
-				<!--<label for="client">Nombre del destinatario:</label><br>
-				<input type="text" name="client" #client="ngModel" [(ngModel)]="giftcard.client" required /><br>
- 				
- 				<span class="form_error" *ngIf="client.touched && !client.valid">El destinatario es obligatorio</span><br>
-
- 				<label for="emailClient">Email del destinatario :</label><br>
-    								<input type="text" name="emailClient" #emailClient="ngModel"
-    									[(ngModel)]="giftcard.emailClient" required /><br>
-    								<span class="form_error" *ngIf="emailClient.touched && !emailClient.valid">El email del destinatario es obligatorio</span><br>-->
-
-
-
-    		<!--<label for="dni">Dni:</label><br>
-    								<input type="number" name="dni" #dni="ngModel" [(ngModel)]="giftcard.dni" 
-    									min="1000000" /><br>
-    								<span class="form_error" *ngIf="dni.touched && !dni.valid">El dni del cliente /
-    									agasajado está incompleto o no es válido</span><br>-->
-					
-					
-
-						<!--<label for="phoneClient"> Teléfono del destinatario: </label><br>
-    								<input type="number" name="phoneClient" #phoneClient="ngModel"
-    									[(ngModel)]="giftcard.phoneClient" required min="1000000000" /><br>
-    								<span class="form_error" *ngIf="phoneClient.touched && !phoneClient.valid">El teléfono
-    									del cliente está incompleto o no es válido</span><br>
-
-				<br>
-				
-
-				<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop1"><i class='fa fa-shopping-cart'></i> Comprar </button>-->
-
-
-<!--<i class='fa fa-shopping-basket'></i>-->
 				
 
 			</form>
 
+
+  
 </div>
 
-						<!-- Modal -->
+<!--eND PAGE CONTENT -->
+
+</div>
+</div>
+
+
+
+</section>
+
+
+	<!-- Modal -->
 						<div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 						  <div class="modal-dialog modal-dialog-centered">
 						    <div class="modal-content">
 						      <div class="modal-header ">
-						        <h6 class="modal-title " style="margin-left: 25%!important;">Saldremos a  <i class='fa fa-credit-card'></i> Mercado Pago <br>para concretar la compra.	</h6>
+						        <h6 class="modal-title " style="">Saldremos a <i class='fa fa-credit-card'></i> Mercado Pago para concretar la compra.	</h6>
 
 						      
 						        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -182,23 +128,10 @@
 						      <div class="modal-body" >
 						        <div class="modalConfirm" role="alert" *ngIf="entendido==false" >
 
-
-												
-
-																						
+													
 												<form class="Formulario" #giftcardForm="ngForm" (ngSubmit)="checkout(giftcardForm)" id="formMP">
 
-
-
-
-
-
-
-
-
-
-													
-														<label for="buyerName"><i class='fa fa-user'></i> Comprador:</label> &nbsp;
+														<label for="buyerName"><!--<i class='fa fa-user'></i>--> Comprador:</label> &nbsp;
 														
 														<label type="text" name="status" #status="ngModel" [(ngModel)]="giftcard.buyerName">
 															<h4> {{giftcard.buyerName}}
@@ -207,13 +140,13 @@
 														
 														<br>
 															
-														<label for="buyerEmail" id="giftcardForm2"><i class='fas fa-mail-bulk'></i> E-mail:</label>&nbsp;
+														<label for="buyerEmail" id="giftcardForm2"><!--<i class='fas fa-mail-bulk'></i>--> E-mail:</label>&nbsp;
 					    								<label type="text" name="buyerEmail" #status="ngModel" [(ngModel)]="giftcard.buyerEmail">
 															<h4> {{giftcard.buyerEmail}}
 															</h4></label><br>
 														
 																
-																<label for="amount"><i class='fas fa-money-check-alt'></i> $ Monto en ARS:</label>&nbsp;
+																<label for="amount"><!--<i class='fas fa-money-check-alt'></i>--> $ Monto en ARS:</label>&nbsp;
 																	<label type="number" name="amount" #status="ngModel" [(ngModel)]="giftcard.amount">
 																<h4>$ {{giftcard.amount}}
 																</h4></label>
@@ -261,18 +194,4 @@
 						</div>
 
 <!--FIN MODAL-->
-
-
-
-				</div>
-	  </div>
-</div>
-
-  
-
-
-
-</section>
-
-
 

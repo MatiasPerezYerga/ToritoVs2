@@ -10,6 +10,7 @@ import {ShowroomComponent} from './components/showroom/showroom.component';
 import {GiftcardsComponent} from './components/giftcards/giftcards.component';
 import {GiftcardComponent} from './components/giftcard/giftcard.component';
 import {AuthGuard} from './services/auth.guard'; 
+import {SuccessComponent} from './components/success/success.component';
 
 const routes: Routes = [
 
@@ -18,13 +19,14 @@ const routes: Routes = [
 
 {path:'home', component:HomeComponent},
 {path:'checkout', component:CheckoutComponent},
-{path:'confirmgiftcard', component:ConfirmGiftcardComponent},
+//{path:'confirmgiftcard', component:ConfirmGiftcardComponent},
 {path:'contact',component:ContactComponent},
 {path: 'login', component: LoginComponent},
 {path: 'register', component: RegisterComponent,canActivate:[AuthGuard]},
-{path: 'showroom', component: ShowroomComponent},
+//{path: 'showroom', component: ShowroomComponent},
 {path: 'giftcards', component: GiftcardsComponent,canActivate:[AuthGuard]},
 {path:'giftcard-edit/:id', component: GiftcardComponent,canActivate:[AuthGuard]},
+{path:'success',component: SuccessComponent},
 { path: '**', pathMatch: 'full', component: HomeComponent },
 
 ];

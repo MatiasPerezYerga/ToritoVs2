@@ -6,7 +6,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <style>
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
@@ -18,24 +17,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 
 <body class="min-vh-100">
- 
-
 <div  *ngIf="loader" class="text-center" id="loader" style="">
- 
-  <div class="col-12 min-vh-100 d-flex align-items-center justify-content-center">
+<div class="col-12 min-vh-100 d-flex align-items-center justify-content-center">
+
 <div class="text-primary" role="status">
   
-  <!--<img src="https://res.cloudinary.com/dzyvb836r/image/upload/v1656210951/11_xecqlf.gif" style="width:70%;border-radius: 30px;">-->
-  
-  <!--GIF ARTISTICO TORITO<img src="https://res.cloudinary.com/dzyvb836r/image/upload/v1656210951/5_djghu6.gif" style="width:60%;border-radius: 20px;padding: 10px;box-shadow: 10px 10px 5px black;background-color: whitesmoke;">-->
-
-   <!--GIF VACA CIRCULAR PISPEANDO <img src="https://res.cloudinary.com/dzyvb836r/image/upload/v1656210951/6_b5vdi2.gif" style="width:40%;border-radius: 250px;padding: 10px;box-shadow: 10px 10px 5px black;background-color: ghostwhite;">-->
-
-
-    <!--toro guitarrero GIF<img src="https://res.cloudinary.com/dzyvb836r/image/upload/v1656210950/4_n36rtp.gif" style="width:70%;border-radius: 250px;padding: 10px;box-shadow: 10px 10px 5px black;background-color: white;">-->
-
-<!--Torito al galope<img src="https://res.cloudinary.com/dzyvb836r/image/upload/v1656210951/9_tndsk3.gif" style="width:40%;border-radius: 20px;padding: 10px;box-shadow: 10px 10px 5px black;background-color: transparent;">-->
-
 <img src="https://res.cloudinary.com/dzyvb836r/image/upload/v1656210951/9_tndsk3.gif" id="loaderTorito" ><br>
 
 
@@ -51,51 +37,28 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <div class ="w-100" *ngIf="!loader">
 
 <!--Aca va el resto-->
-<div >
+<div class="min-vh-100">
 
-              <!-- BARRA VERTICAL DEBE ESTAAR OCULTA  A PARTIR MEDIUM -->
-              <nav class="w3-sidebar w3-black w3-bar-block w3-small w3-center  d-none d-xxl-block" id="myNavbar">
-                <!-- Avatar image in top left corner -->
-                <img src="https://res.cloudinary.com/dzyvb836r/image/upload/v1654739810/2ndToritoPortal_ms3ivn.jpg" style="width:100%;filter:grayscale(90%)!important; border-radius: 80px;">
-                <a routerLink='/home' class="w3-bar-item w3-button w3-black" id="myNavbar2">
-                  <i class="fas fa-home " ></i>
-                  <p>HOME</p>
-                </a>
-                <a  data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="w3-bar-item w3-button " id="myNavbar2">
-                 <i class='fas fa-book-open'> </i> <br>
-                  <p>MENU</p>
-                </a>
-                <a routerLink='/showroom' class="w3-bar-item w3-button " id="myNavbar2">
-                  <i class='fas fa-money-check-alt'  > </i> <br>GIFTCARD
-                </a>
-                <a routerLink='/contact' class="w3-bar-item w3-button " id="myNavbar2">
-                  <i class="fa fa-phone "></i><br>
-                  <p class="m-1">CONTACT</p>
-                </a>
+        
 
-                
-              </nav>
-
-              <!-- BARRA HORIZONTAL DEBE APARECER A PARTIR DE MEDIUM --> 
+              <!-- BARRA HORIZONTAL  --> 
 
 
   <div class="row">
     <div class="col-12">
         <div class="w3-top" id="myNavbar">
-                <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small d-xxl-none">
-                  <a routerLink='/home' class="w3-bar-item w3-button" id="btnNavBar">HOME</a>
-                  <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="w3-bar-item w3-button" id="btnNavBar">MENU</a>
-                  <a routerLink='/showroom' class="w3-bar-item w3-button" id="btnNavBar">GIFTCARD</a>
-                  <a routerLink='/contact' class="w3-bar-item w3-button" id="btnNavBar">CONTACT</a>
-                </div>
-                <div class=" w-100" id="myNavbar2" *ngIf=(user) >
-                <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-                  <label  id="user" class="w3-bar-item "  ><i class='fas fa-hat-cowboy-side'></i> User: {{user}}</label>
-                  <a  id="btnGiftcards" routerLink='/giftcards' class="w3-bar-item" s><i class='fa fa-window-restore'></i> Giftcards</a>
-                  <label  id="lblMyNav2"class="w3-bar-item " ></label>
-                  <a  class="btn-sm btn-warning " (click)="onLogout()" id="logOut"><i class='fa fa-sign-out'></i> Log Out</a>
+<div class=" w-100" id="myNavbar2" *ngIf=(user) >
+                  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+                  <label  id="user" class="w3-bar-item"><i class='fas fa-hat-cowboy-side'></i> User: {{user}}</label>
+                  <a  id="btnGiftcards" routerLink='/giftcards' class="w3-bar-item"><i class='fa fa-window-restore'></i> Giftcards</a>
+                  <a  id="btnGiftcards" routerLink='/home' class="w3-bar-item"><i class='fa fa-home'></i> Home</a>
+                  <a  class="btn-sm btn-warning" style="margin-top: 5%!important;" (click)="onLogout()" id="logOut"><i class='fa fa-sign-out'></i> Log Out</a>
                 </div>
               </div>
+          <div class=" w3-center w3-black" id="homeNavBar">
+          <img   alt="Torito Logo" src="https://res.cloudinary.com/dzyvb836r/image/upload/v1663034010/TORITO_yod7dk.png" id="ToritoLogo">
+          </div>
+                 
               </div>
     </div>
    
@@ -106,15 +69,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 
 
-  <!-- Torito member Navbar on small screens (Hidden on medium and large screens) 
-              <div class="w3-top w-100" id="myNavbar2" *ngIf=(user) >
-                <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-                  <label  id="user" class="w3-bar-item "  ><i class='fas fa-hat-cowboy-side'></i> User: {{user}}</label>
-                  <a  id="btnGiftcards" href="/giftcards" class="w3-bar-item " s><i class='fa fa-window-restore'></i> Giftcards</a>
-                  <label  id="lblMyNav2"class="w3-bar-item " ></label>
-                  <a href="" class="btn-sm btn-warning " (click)="onLogout()" id="logOut"><i class='fa fa-sign-out'></i> Log Out</a>
-                </div>
-              </div>-->
 
 
             
@@ -170,40 +124,15 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                 <router-outlet></router-outlet>
 
             </div>
-<footer id="ftr1" class="footer text-center w3-black ">
-  <div class="w-100">
-    
-    <div class="w-100">
-      <div class=" h-100 w-100"  >
-    <br><br>
-        <a  class="" id="btnNavSocial" href="https://www.facebook.com/torito.mza"><img  id="redSoc" class="fl-photo-img wp-image-19 size-full" src="https://res.cloudinary.com/dzyvb836r/image/upload/v1647045242/facebookWhite_dvjlqv.png" alt="Facebook" itemprop="image" height="30" width="30"></a> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
-       <a  class="" id="" href="https://www.instagram.com/torito.mza/"><img id="redSoc" class="fl-photo-img wp-image-19 size-full" src="https://res.cloudinary.com/dzyvb836r/image/upload/v1647045242/instaWhite_ldg2vg.png" alt="instagram" itemprop="image" height="30" width="30"></a>
+<footer id="ftr1" class="footer text-center" style="">
+<div class="w-100">
 
-        
-      </div>
-
-        <div class="row  h-100 m-2 p-2 "   id="ftr3" >
-  
-       <span  id="ftr3" >© 2021 Torito Inc.</span> 
-      
-
-      
-        
-      </div>
-          <br>
-          
-
-     
-      
+<a  class="" id="btnNavSocial" href="https://www.facebook.com/torito.mza"><img  id="redSoc" class="fl-photo-img wp-image-19 size-full" src="https://res.cloudinary.com/dzyvb836r/image/upload/v1647045242/facebookWhite_dvjlqv.png" alt="Facebook" itemprop="image" height="30" width="30"></a> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+<a  class="" id="" href="https://www.instagram.com/torito.mza/"><img id="redSoc" class="fl-photo-img wp-image-19 size-full" src="https://res.cloudinary.com/dzyvb836r/image/upload/v1647045242/instaWhite_ldg2vg.png" alt="instagram" itemprop="image" height="30" width="30"></a>
 </div>
+<p  id="ftr3" class="m-2">© 2021 Torito Inc.</p> 
 
-
-    
-
-   
-  </div>
 </footer>
-
 <!--Acá finaliza el Torito Loader-->
 </div>
 </body>
