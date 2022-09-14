@@ -1,0 +1,1070 @@
+/*----------------------------APP COMPONENT-------------------------*/
+
+@font-face{
+  font-family: "Mont";
+  src:  url("/Mont.ttf");
+}
+
+
+#loader{
+
+background-color:rgba(0,0,0,0.9)!important;
+z-index: 900px!important;
+
+}
+
+
+#loaderTorito{
+
+  filter:  invert(100%);
+  width:30%;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px white;
+  background-color: transparent;
+  border: 1px solid black;
+
+}
+
+
+#homeNavBar{
+background-color: transparent!important;
+
+}
+
+
+#btnNavBar{
+
+width:25% !important;
+
+}
+
+
+#btnNavBarV{
+padding-top:200px!important ;
+
+
+}
+
+
+
+#myNavbar2{
+
+background-color: rgba(0, 0, 0, 0)!important;
+font-size: 20px !important;
+
+
+}
+
+#myNavbar2:hover{
+background-color: darkgray!important;
+
+}
+
+
+
+/*TORITO LOGO BRO*/
+
+#ToritoLogo{
+width: 25%;
+
+}
+
+/*-----Botones NavBar 2-----*/
+#user{
+width:25% !important;
+background-color: rgba(0, 0, 0, 0.9)!important;
+border-radius: 10px!important;
+
+}
+
+#btnGiftcards{
+width:25% !important;
+background-color: rgba(0, 0, 0, 0.9)!important;
+border-radius: 10px!important;
+text-decoration: none!important;
+
+
+}
+
+#lblMyNav2{
+  
+  width:25% !important
+}
+
+#logOut{
+width:24% !important;
+text-decoration: none!important;
+
+
+
+}
+/*-----Fin botones NavbarAdmin------*/
+
+
+
+/* FOOTER */
+
+#ftr1{
+background-color: transparent;
+margin-top: -20%;
+color: white;
+height: 50px;
+font-weight: bold;
+}
+
+
+/*------------------------HOME COMPONENT----------------------------*/
+.btnHome{
+
+position: absolute!important;
+  top: 90%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  
+  
+  /*/padding: 12px 24px;*/
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+
+
+}
+
+
+#rowHome{
+
+background-image: url("https://res.cloudinary.com/dzyvb836r/image/upload/v1663032967/TORITO_12_1_aqzwqp.jpg");
+ background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+background-size: cover;
+
+}
+
+#btnHomeSmall{
+ box-shadow: 10px 10px 5px black;
+border-radius: 5px;
+width: 130px !important;
+background-color: rgba(176,40,42,0.8)!important;
+font-weight: bold;
+margin-top: 60%;
+}
+
+
+#columnHome{
+min-height: 60vh!important;
+}
+
+#subTittle{
+font-size: 20px;
+
+}
+
+
+
+/*------------------------------------------------------------------*/
+#colDown{
+min-height: 80vh!important;
+
+}
+
+#img_container {
+    position:relative;
+    display:inline-block;
+    text-align:center;
+    border:1px solid red;
+}
+
+.button {
+    position:absolute;
+    bottom:10px;
+    right:10px;
+    width:100px;
+    height:30px;
+}
+
+
+
+
+#sectionMain{
+background-color: black;
+
+
+}
+
+
+
+.modal-title{
+
+  color:  black;
+}
+
+.modalConfirm{
+color:  black;
+
+}
+
+/*------------------------LOGIN COMPONENT----------------------------*/
+#principalLogin{
+  
+  
+  background-image: url("https://res.cloudinary.com/dzyvb836r/image/upload/v1646957600/rodeo3_sg2mjh.jpg");
+  background-color:  rgba(0, 0, 0, 1);
+   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  color: white;
+  
+  
+  
+  
+}
+
+
+
+/*----------------------- VIEW GIFTCARDs COMPONENENT----------------------- */
+#viewGiftcard {
+ 
+  color:white;
+  background-image: url("https://res.cloudinary.com/dzyvb836r/image/upload/v1646957600/rodeo3_sg2mjh.jpg");
+  background-color:  rgba(0, 0, 0,1);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  
+  
+}
+
+
+
+#toroLoaderGcs{
+ filter:  invert(100%)  ;
+ width:30%;
+ border-radius: 20px;
+ box-shadow: 10px 10px 5px white;
+ background-color: transparent;
+ border: 1px solid black;
+
+}
+
+
+/*Primer fondo del acordeon , capa por debajo*/
+.accordion-item{
+border-radius: 20px!important;
+background-color: rgba(93, 75, 75, 0.5) !important;
+
+}
+
+/* Fondo despliegue del acordeon */
+.accordion-collapse{
+
+border-radius: 20px!important;
+background-color: rgba(0, 0, 0, 0.5) !important;
+
+
+}
+
+#buttonAcordion{
+
+border-radius: 20px!important;
+background-color: rgba(93, 75, 75, 0.5) !important;
+
+}
+
+
+/*------------------------VIEW GIFTCARD COMPONENT-----------------------*/
+#principalGiftcard{
+
+ background-color: rgba(0, 0, 0, 0.4);
+  color:white!important;
+  background-image: url("https://res.cloudinary.com/dzyvb836r/image/upload/v1646957600/rodeo_f0kgdj.jpg");
+  background-color:  rgba(0, 0, 0, 0.9);
+  background-size: cover;
+  background-position: center;
+  padding-top: 10%;
+  min-height: 80vh!important;
+  border: white;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-left: 1px solid;
+  border-right: 1px solid;
+
+}
+
+
+#formEdit{
+
+  color:white; font-size: 12px;
+  }
+
+
+#highL2{
+font-size: 10px;
+color:  white;
+font-weight: bold;
+font-family: monospace;
+
+
+}
+
+
+
+#tGc2{
+color: white;
+
+font-weight: bold;
+text-align: center;
+margin-left: 20%;
+}
+
+
+/*------------------------ CHECKOUT COMPONENT-----------------------*/
+
+#checkoutGiftcard{
+background-image: url("https://res.cloudinary.com/dzyvb836r/image/upload/v1663033624/TORITO54_dperd3.jpg");
+ background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  color: white;
+  background-size: cover;
+
+ 
+}
+
+
+#btnCheckout{
+
+background-color: rgba(176,40,42,0.9);
+width: 18rem!important;
+color:  white;
+text-transform: uppercase;
+border-radius: 10px;
+box-shadow: 5px 5px 5px black;
+font-size: 20px;
+height: 40px;
+font-weight: bold;
+}
+
+
+#icoHome{
+margin-right: 5%;
+margin-top: 5%;
+width: 12%;
+}
+
+
+#rowGiftcard{
+
+margin-top: 30%
+
+}
+
+#card{
+
+width: 18rem;
+background-color: rgba(0, 0, 0, 0.5);
+ color: white;
+
+
+}
+
+#cardBody{
+
+
+}
+
+.form-control{
+border-radius: 10px;
+
+
+}
+
+/*------------------------ Confirm GIFTCARD COMPONENT-----------------------*/
+
+
+
+#confirmGiftcard{
+
+ background-color: rgba(0, 0, 0, 0.4);
+  color:white!important;
+  background-image: url("https://res.cloudinary.com/dzyvb836r/image/upload/v1646957599/rodeo5_ugojk6.jpg");
+  background-color:  rgba(0, 0, 0, 0.9);
+  background-size: cover;
+  background-position: center;
+  padding-top: 10%;
+ 
+  border: white;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-left: 1px solid;
+  border-right: 1px solid;
+
+}
+
+
+#tableValues{
+font-size: 12px;
+color: white;
+
+}
+
+
+/*-------------------------CONTACT COMPONENT---------------------------*/
+
+#rowContact{
+
+background-color: rgba(0, 0, 0, 0.4);
+  color:white!important;
+  background-image: url("https://res.cloudinary.com/dzyvb836r/image/upload/v1663033619/TORITO_11_1_ztrhlq.jpg");
+   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+background-size: cover;
+  background-color:  rgba(0, 0, 0, 0.9);
+ 
+ 
+  padding-top: 10%;
+ 
+  border: white;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-left: 1px solid;
+  border-right: 1px solid;
+
+}
+
+#imgCar1{
+
+
+  background-size: cover;
+  background-position: center;
+}
+
+
+#imgCar2{
+
+
+
+  background-size: cover;
+  background-position: center;
+
+}
+
+#btnContact{
+ box-shadow: 10px 10px 5px black;
+border-radius: 5px;
+width: 250px;
+background-color: rgba(176,40,42,0.8)!important;
+font-weight: bold;
+}
+
+
+#imgCard3{
+
+  background-size: cover;
+  background-position: center;
+
+
+
+}
+
+#baseContainer{
+
+background-color: rgba(0, 0, 0, 0.6);
+
+border-radius: 40px;
+
+padding: 5%;
+
+
+}
+
+.carousel-indicators{
+margin-bottom: 2rem;
+
+
+}
+
+#imgCard{
+
+width: 100%;
+border-radius: 20px;
+
+
+}
+
+#textCard{
+font-size: 13px;
+
+}
+
+
+
+#locales{
+  font-size: 15px!important;
+  font-weight: bold;
+}
+
+
+#rowColumnContact{
+min-height: 90vh;
+
+}
+
+
+
+
+/*---------------------------SHOWROOM COMPONENT----------------------------*/ 
+
+.card{
+  border-radius: 15px;
+  color: black;
+
+
+}
+
+.card-footer{
+  background-color:transparent;
+
+}
+
+#imgCard{
+
+border-radius: 40px;
+}
+
+
+
+#staticBackdrop{
+
+background-color: rgba(0, 0, 0,0.2)!important;
+
+}
+
+#modalReport{
+
+  background-color: rgba(0, 0, 0,0.8)!important;
+color: white!important;
+}
+
+#btnShowRoom{
+width: 130px!important;
+height: 30px!important;
+text-decoration: none;
+border-radius: 5px;
+box-shadow: 5px 5px 5px black;
+
+}
+
+
+#reportForm{
+font-size: 12px;
+background-color: rgba(0, 0, 0,0.3)!important;
+color: white!important;
+
+}
+
+.form_error{
+
+color: white;
+background-color: rgba(255, 0, 0, 0.4);
+border-radius: 5px;
+
+}
+
+.form-text{
+color:white!important;
+font-size: 11px;
+}
+
+
+
+
+
+/*-------------------------------------------------------------------
+                        10. RESPONSIVE *-- By Matias PY --*
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+                        1920px min
+-------------------------------------------------------------------*/
+@media (min-width:1920px) {
+  
+#icoHome{
+margin-right: 2%;
+margin-top: 2%;
+width: 5%;
+}
+
+#card{
+width: 30rem;
+font-size: 25px;
+}
+
+
+
+
+#btnShowRoom{
+font-size: 18px;
+}
+
+
+#btnHomeSmall{
+width: 200px!important;
+font-size: 20px!important;
+margin-top: 50%;
+}
+
+
+#rowGiftcard{
+margin-top: 20%
+}
+
+
+#ToritoLogo{
+width: 10%;
+
+}
+
+#subTittle{
+font-size: 40px;
+
+}
+
+
+#ftr1{
+margin-top: -5%;
+}
+
+
+#ftr3{
+font-size: 25px;
+}
+
+
+
+#btnCheckout{
+
+width: 30rem!important;
+font-size: 25px;
+height: 50px;
+
+}
+
+#rowColumnContact{
+min-height: 60vh;
+font-size: 50px!important;
+}
+
+
+#btnContact{
+ font-size: 25px;
+ width: 380px;
+
+
+}
+
+
+}
+
+/*-------------------------------------------------------------------
+                        1440 max 
+ -------------------------------------------------------------------*/
+
+@media (min-width:1440px) and (max-width:1919px) {
+ 
+#rowGiftcard{
+margin-left:10%!important;
+padding-left: 5%;
+
+}
+
+
+#myNavbar2{
+margin-top: 0%;
+
+
+}
+
+
+
+#myCarousel{
+margin-left: 25%!important;
+
+
+}
+
+.card{
+
+
+
+
+}
+
+#imgCard{
+width: 127% !important;
+
+}
+
+#btnHomeSmall{
+width: 130px;
+}
+
+#btnHomeSmall{
+width: 200px!important;
+font-size: 20px!important;
+
+}
+
+#subTittle{
+font-size: 40px;
+
+}
+
+
+}
+
+
+/*-------------------------------------------------------------------
+                        1280 max
+
+@media (max-width:1280px) {
+  
+}
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+                        Rango:  1025 min hasta 1280 max
+
+
+@media (min-width:1025px) and (max-width:1280px) {
+  
+}
+-------------------------------------------------------------------*/
+
+@media (min-width:1400px) {
+
+#viewGiftcard{
+margin-left: 15%!important;
+
+}
+
+}
+
+/*-------------------------------------------------------------------
+                        1024 max to  1380
+-------------------------------------------------------------------*/
+
+@media (min-width:1180px) and (max-width:1379px) {
+ 
+#imgCard{
+
+  width: 128%!important;
+  padding-left: 10%!important;
+
+}
+
+#myNavbar2{
+
+
+
+}
+
+
+#myCarousel{
+margin-left: 26%!important;
+
+
+}
+
+#btnHomeSmall{
+width: 130px;
+
+}
+
+
+#btnShowRoom{
+
+width: 140px;
+
+
+}
+
+
+
+
+
+}
+
+/*-------------------------------------------------------------------
+                        1025 max to  1179
+-------------------------------------------------------------------*/
+
+@media (min-width:1025px) and (max-width:1179px) {
+
+#rowGiftcard{
+
+
+}
+
+
+#myCarousel{
+margin-left: 20%!important;
+
+
+}
+
+
+.card{
+
+
+
+}
+
+
+
+
+#btnHomeSmall{
+width: 140px;
+
+}
+#imgCard{
+
+  width: 125%!important;
+  padding-left: 10%!important;
+}
+
+
+
+
+
+
+
+}
+
+@media  (min-width:1024px) {
+#accordionExample{
+ width: 800px!important;
+
+}
+
+
+}
+/*-------------------------------------------------------------------
+                        1024 max
+-------------------------------------------------------------------*/
+
+@media (min-width:800px) and (max-width:1024px) {
+ 
+.card{
+width: 42%;
+padding-left: 0%;
+margin-left: 0% ;
+
+
+/*height: 260px;*/
+
+
+}
+
+#myCarousel{
+margin-left: 20%!important;
+
+
+}
+
+
+#imgCard{
+
+  width: 125%!important;
+  padding-left: 10%!important;
+}
+
+.card-body{
+
+
+
+}
+ 
+
+#btnHomeSmall{
+width: 130px;
+
+}
+
+
+#btnShowRoom{
+
+width: 140px;
+
+
+}
+
+
+
+
+
+}
+
+/*-------------------------------------------------------------------
+                        768 max and max width 980px
+-------------------------------------------------------------------*/
+
+@media (min-width:768px) and (max-width:798px) {
+
+.card{
+width: 45%;
+padding-left: 0%!important;
+margin-left: 0% ;
+
+}
+
+#myCarousel{
+margin-left: 15%!important;
+
+
+}
+
+#imgCard{
+
+  width: 88%;
+}
+
+#myNavbar2{
+
+}
+
+
+#btnHomeSmall{
+width: 130px;
+
+}
+
+
+#btnShowRoom{
+
+width: 140px;
+
+
+}
+
+#customerService{
+margin-top: 50%;
+
+}
+
+  
+}
+
+
+
+
+/*-------------------------------------------------------------------
+                        768 max 
+-------------------------------------------------------------------*/
+
+@media  (min-width:426px) and (max-width:768px) {
+
+#home{
+
+
+}
+
+
+#btnHomeSmall{
+width: 130px!important;
+
+}
+
+
+}
+
+
+
+/*-------------------------------------------------------------------
+                        (min-width:426px) and 640 max 
+-------------------------------------------------------------------*/
+
+
+@media (min-width:426px) and (max-width:640px) {
+
+#home{
+
+
+}  
+
+
+  
+}
+
+/*-------------------------------------------------------------------
+                        425 max 
+-------------------------------------------------------------------*/
+
+@media (max-width:425px) {
+
+#myCarousel{
+margin-left: 3%!important;
+
+
+}
+
+.btnHome{
+
+position: absolute!important;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+
+.w3-image{
+
+  width: 847px!important;
+  height: 640px!important; 
+}
+
+
+#btnHomeSmall{
+  margin-left:10%!important ;
+
+padding-left: 2%!important;
+
+/*width: 130%!important;*/
+}
+  
+
+
+
+}
+
+@media (max-width:375px) {
+
+
+#btnHomeSmall{
+  margin-left:10%!important ;
+
+padding-left: 2%!important;
+font-size: 12px!important;
+}
+
+
+
+}
+
+@media (max-width:360px) {
+  
+}
+
+@media (max-width:320px) {
+
+}
+
+
+@media (max-width: 1024px){
+ 
+}
