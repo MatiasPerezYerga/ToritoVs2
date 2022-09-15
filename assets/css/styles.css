@@ -356,8 +356,12 @@ width: 12%;
 
 #rowGiftcard{
 
-margin-top: 30%
+margin-top: 25%
 
+}
+
+.card-body{
+  padding: 0%!important;
 }
 
 #card{
@@ -421,16 +425,15 @@ background-color: rgba(0, 0, 0, 0.4);
   background-attachment: fixed;
   background-position: center top;
 background-size: cover;
-  background-color:  rgba(0, 0, 0, 0.9);
+
+
  
- 
-  padding-top: 10%;
- 
-  border: white;
-  padding-left: 5%;
-  padding-right: 5%;
-  border-left: 1px solid;
-  border-right: 1px solid;
+
+
+
+
+
+
 
 }
 
@@ -618,7 +621,7 @@ margin-top: 50%;
 
 
 #rowGiftcard{
-margin-top: 20%
+margin-top: 10%
 }
 
 
@@ -661,6 +664,12 @@ font-size: 50px!important;
 #btnContact{
  font-size: 25px;
  width: 380px;
+
+
+}
+
+#rowContact{
+
 
 
 }
