@@ -372,6 +372,11 @@ height: 25px!important;
 
 }
 
+#actorLabel{
+font-size: 20px;
+
+}
+
 #card{
 
 width: 18rem;
@@ -645,7 +650,7 @@ font-size: 40px;
 
 
 #ftr1{
-margin-top: -5%;
+margin-top: -2%;
 }
 
 
