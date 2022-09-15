@@ -440,14 +440,6 @@ background-color: rgba(0, 0, 0, 0.4);
 background-size: cover;
 
 
- 
-
-
-
-
-
-
-
 }
 
 #imgCar1{
@@ -469,7 +461,7 @@ background-size: cover;
 
 #btnContact{
  box-shadow: 10px 10px 5px black;
-border-radius: 5px;
+border-radius: 25px;
 width: 250px;
 background-color: rgba(176,40,42,0.8)!important;
 font-weight: bold;
@@ -594,6 +586,34 @@ color:white!important;
 font-size: 11px;
 }
 
+/*--------------------------- SUCCESS COMPONENT----------------------------*/ 
+#rowSuccess{
+background-color: rgba(0, 0, 0, 0.4);
+  color:white!important;
+  background-image: url("https://res.cloudinary.com/dzyvb836r/image/upload/v1663211675/mockup_gift_card_gcvt4d.jpg");
+   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+background-size: cover;
+
+}
+
+#btnSuccess{
+width: 18rem;
+background-color: rgba(54,178,80,1)!important;
+border-radius: 20px;
+box-shadow: 10px 10px 10px black;
+height: 60px;
+font-size: 20px;
+font-weight: bold;
+padding-top: 5%!important;
+
+}
+
+
+
+
+
 
 
 
@@ -634,7 +654,7 @@ margin-top: 50%;
 
 
 #rowGiftcard{
-margin-top: 10%
+margin-top: 20%
 }
 
 
@@ -650,7 +670,7 @@ font-size: 40px;
 
 
 #ftr1{
-margin-top: -2%;
+margin-top: -5%;
 }
 
 
@@ -669,7 +689,7 @@ height: 50px;
 }
 
 #rowColumnContact{
-min-height: 60vh;
+min-height: 100vh;
 font-size: 50px!important;
 }
 
@@ -682,8 +702,10 @@ font-size: 50px!important;
 }
 
 #rowContact{
-
-
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 
 }
 
