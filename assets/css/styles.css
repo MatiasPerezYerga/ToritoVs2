@@ -27,7 +27,7 @@ z-index: 900px!important;
 
 
 #homeNavBar{
-background-color: transparent!important;
+
 
 }
 
@@ -66,7 +66,7 @@ background-color: darkgray!important;
 
 #ToritoLogo{
 width: 25%;
-
+background-color: transparent!important;
 }
 
 /*-----Botones NavBar 2-----*/
