@@ -356,12 +356,20 @@ width: 12%;
 
 #rowGiftcard{
 
-margin-top: 25%
+margin-top: 30%
 
 }
 
+
+
 .card-body{
   padding: 0%!important;
+}
+
+.form-control{
+height: 25px!important;
+
+
 }
 
 #card{
