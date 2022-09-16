@@ -134,11 +134,12 @@ position: absolute!important;
 
 #rowHome{
 
-background-image: url("https://res.cloudinary.com/dzyvb836r/image/upload/v1663032967/TORITO_12_1_aqzwqp.jpg");
+background-image: url("https://res.cloudinary.com/dzyvb836r/image/upload/v1663361535/TORITO_12_1_aqzwqp_y2lkun.jpg");
  background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
 background-size: cover;
+
 
 }
 
@@ -322,7 +323,7 @@ margin-left: 20%;
 /*------------------------ CHECKOUT COMPONENT-----------------------*/
 
 #checkoutGiftcard{
-background-image: url("https://res.cloudinary.com/dzyvb836r/image/upload/v1663033624/TORITO54_dperd3.jpg");
+background-image: url("https://res.cloudinary.com/dzyvb836r/image/upload/v1663361536/TORITO54_dperd3_n7e9ob.jpg");
  background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
@@ -433,7 +434,7 @@ color: white;
 
 background-color: rgba(0, 0, 0, 0.4);
   color:white!important;
-  background-image: url("https://res.cloudinary.com/dzyvb836r/image/upload/v1663033619/TORITO_11_1_ztrhlq.jpg");
+  background-image: url("https://res.cloudinary.com/dzyvb836r/image/upload/v1663361534/TORITO_11_1_ztrhlq_ho7drj.jpg");
    background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center top;
@@ -591,7 +592,7 @@ font-size: 11px;
 #rowSuccess{
 background-color: rgba(0, 0, 0, 0.4);
   color:white!important;
-  background-image: url("https://res.cloudinary.com/dzyvb836r/image/upload/v1663211675/mockup_gift_card_gcvt4d.jpg");
+  background-image: url("https://res.cloudinary.com/dzyvb836r/image/upload/v1663361540/mockup_gift_card_gcvt4d_vrsoqv.jpg");
    background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center top;
