@@ -600,18 +600,63 @@ background-size: cover;
 }
 
 #btnSuccess{
-width: 18rem;
-background-color: rgba(54,178,80,1)!important;
+width: 19rem;
+background-color: rgba(54,177,80,0.85)!important;
 border-radius: 20px;
 box-shadow: 10px 10px 10px black;
-height: 60px;
-font-size: 20px;
+height: 65px;
+font-size: 24px;
 font-weight: bold;
-padding-top: 5%!important;
+text-align: center;
+color: white;
+vertical-align: middle;
+
+}
+
+#btnSuccess2{
+width: 19rem;
+background-color: rgba(0,0,0,0.50)!important;
+border-radius: 15px;
+box-shadow: 10px 10px 10px black;
+height: 70px;
+font-size: 15px;
+
+text-align: center;
+color: white;
+vertical-align: middle;
+padding-top: 20%;
 
 }
 
 
+
+#btnPending{
+width: 19rem;
+background-color: rgba(208,121,52,0.85)!important;
+border-radius: 20px;
+box-shadow: 10px 10px 10px black;
+height: auto;
+font-size: 22px;
+font-weight: bold;
+text-align: center;
+color: white;
+vertical-align: middle;
+
+}
+
+#btnFail{
+width: 19rem;
+background-color: rgba(202,58,57,0.85)!important;
+border-radius: 20px;
+box-shadow: 10px 10px 10px black;
+height: auto;
+font-size: 22px;
+font-weight: bold;
+text-align: center;
+color: white;
+vertical-align: middle;
+
+}
 
 
 

@@ -22,6 +22,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { GiftcardsComponent } from './components/giftcards/giftcards.component';
 import { GiftcardComponent } from './components/giftcard/giftcard.component';
 import { SuccessComponent } from './components/success/success.component';
+import { PendingComponent } from './components/pending/pending.component';
+import { FailComponent } from './components/fail/fail.component';
   
 
 @NgModule({
@@ -36,7 +38,9 @@ import { SuccessComponent } from './components/success/success.component';
     RegisterComponent,
     GiftcardsComponent,
     GiftcardComponent,
-    SuccessComponent
+    SuccessComponent,
+    PendingComponent,
+    FailComponent
   ],
   imports: [
     BrowserModule,

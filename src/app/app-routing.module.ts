@@ -11,6 +11,8 @@ import {GiftcardsComponent} from './components/giftcards/giftcards.component';
 import {GiftcardComponent} from './components/giftcard/giftcard.component';
 import {AuthGuard} from './services/auth.guard'; 
 import {SuccessComponent} from './components/success/success.component';
+import{PendingComponent} from './components/pending/pending.component';
+import{FailComponent} from './components/fail/fail.component';
 
 const routes: Routes = [
 
@@ -21,6 +23,8 @@ const routes: Routes = [
 {path:'checkout', component:CheckoutComponent},
 //{path:'confirmgiftcard', component:ConfirmGiftcardComponent},
 {path:'contact',component:ContactComponent},
+{path:'pending',component: PendingComponent},
+{path:'fail', component: FailComponent},
 {path: 'login', component: LoginComponent},
 {path: 'register', component: RegisterComponent,canActivate:[AuthGuard]},
 //{path: 'showroom', component: ShowroomComponent},
