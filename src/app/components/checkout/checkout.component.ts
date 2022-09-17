@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import{Giftcard} from '../../models/giftcard';//sali del directorio de create , sali del directorio de compomnentes y entras al de modelos
 import{GiftcardService} from '../../services/giftcard.service';
 
@@ -13,6 +13,8 @@ import {Router } from '@angular/router';
   templateUrl: './checkout.component.html',
   styleUrls: ['./checkout.component.css']
 })
+
+
 export class CheckoutComponent implements OnInit {
 
   public giftcard: Giftcard;
@@ -23,6 +25,7 @@ export class CheckoutComponent implements OnInit {
   public init_point: string;
   public urlTree: any;
   public confirmado:boolean;
+  public loader;
 
   constructor(private _giftcardService: GiftcardService,  private http: HttpClient, private router: Router,) { 
 
@@ -33,7 +36,7 @@ export class CheckoutComponent implements OnInit {
       this.init_point="";
       this.entendido=false;
       this.confirmado=false;
-
+      this.loader=false;
       this.urlTree = this.router.parseUrl(this.router.url);
 
         if(this.urlTree.queryParams['amount']){
@@ -128,41 +131,33 @@ entendidoMet():void{
     });
 
  //window.alert("Realiza los pasos en orden y no interrumpas el proceso de compra. El navegador saldrá a Mercado Pago y luego volverá al sitio web para confirmar la compra. Se te notificará cuando puedas cerrar la ventana.");
-
-
-
    
   }
 
 checkout(form:any){
 
-
+    this.loader=true;
+    console.log("LOADER HAS COMING BABY!");
+        
     localStorage.setItem("buyerName",this.giftcard.buyerName);
     localStorage.setItem("amount", this.giftcard.amount.toString());
     localStorage.setItem("issuedDate",this.giftcard.issuedDate);
- console.log("Realizando petición a mercado y preparando checkout...");
+     console.log("Realizando petición a mercado y preparando checkout...");
 
-    this._giftcardService.buyGiftcard(this.giftcard).subscribe(
+  this._giftcardService.buyGiftcard(this.giftcard).subscribe(
        
             response =>{
               
-             
-          
           
            console.log(response.response.init_point);   
-     /* CON LA RESPONSE QUE ME LLEGA DEL BACKEND  REDIRECCION AL USUARIO*/
-      window.location.href = response.response.init_point;
-          //this.init_point = result.data.result;
-        
-          
-     //window.location.href = this.init_point;
-                
-                form.reset();
-                
-             
+     
+            window.location.href = response.response.init_point;
+     
+            //window.location.href = this.init_point;
+            form.reset();
                         
             },
-            //+"ESTA TIRANDO ERROR NO SE PORQUE"
+            
             error =>{console.log(<any> error);}
         );
 

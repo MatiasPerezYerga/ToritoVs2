@@ -20,6 +20,25 @@
 
   <!-- Header/Home -->
   
+  <div  *ngIf="loader" class="text-center" id="loader" style="">
+<div class="col-12 min-vh-100 d-flex align-items-center justify-content-center">
+
+<div class="text-primary" role="status">
+  
+<img src="https://res.cloudinary.com/dzyvb836r/image/upload/v1656210951/9_tndsk3.gif" id="loaderTorito" ><br>
+
+
+<p class="m-2 p-2 " style="color: white;">Cargando...</p>
+
+
+</div>
+
+</div>
+</div>
+<!--Loader Div Ends-->
+
+<div class ="w-100" *ngIf="!loader">
+
    <div class="container ">
  
 			<form class="text-center " #giftcardForm="ngForm" (ngSubmit)="checkout(giftcardForm)" id="formMP">
@@ -80,7 +99,7 @@
 
 
 <div class="row justify-content-center m-1 p-2" id="">
-				  <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#staticBackdrop1" 
+				  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop1" 
 				  id="btnCheckout"><i class='fa fa-shopping-cart' ></i><!--<i class='fa fa-shopping-basket'></i>--> Comprar </button>
 				
 
@@ -99,7 +118,7 @@
 
 
 
-
+</div>
 </section>
 
 
@@ -170,7 +189,7 @@
 						       <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
 						       <!-- <button type="button" class="btn btn-primary">Understood</button>-->
 						      
-												 			<button  class="btn btn-outline-dark" type="submit"  [disabled]="!giftcardForm.form.valid"> <i class='fas fa-rocket me-2'></i> A Mercado Pago </button>
+												 			<button  class="btn btn-outline-dark" type="submit" data-bs-dismiss="modal" [disabled]="!giftcardForm.form.valid"> <i class='fas fa-rocket me-2'></i> A Mercado Pago </button>
 
 																		<br>
 															</div>
