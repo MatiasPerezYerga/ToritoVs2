@@ -155,10 +155,18 @@ checkout(form:any){
      
             //window.location.href = this.init_point;
             form.reset();
-                        
+
+               //Loader variable set false after page load
+            setTimeout(()=>{                           
+            this.loader = false;
+            }, 10000);
+
             },
-            
-            error =>{console.log(<any> error);}
+            //deberia  rediri
+            error =>{console.log(<any> error);
+              //this.router.navigateByUrl('/checkout');
+
+            }
         );
 
 
