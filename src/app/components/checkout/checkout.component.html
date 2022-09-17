@@ -56,17 +56,16 @@
 				<!--[(ngModel)]="project.name" 2 ways data binding para modificar el atributo name del project-->
 				<!-- el # indica que es la identificacion para Angular-->
 				<span class="form_error" *ngIf="buyerName.touched && !buyerName.valid">El nombre es
-					obligatorio</span>
+					obligatorio<br></span>
 
 					<label for="buyerEmail" id="giftcardForm2">E-MAIL:</label><br>
     								<input class="form-control" type="text" name="buyerEmail" #buyerEmail="ngModel"
     									[(ngModel)]="giftcard.buyerEmail" required />
-    								<span class="form_error" *ngIf="buyerEmail.touched && !buyerEmail.valid">El e-mail es obligatorio</span>
+    								<span class="form_error" *ngIf="buyerEmail.touched && !buyerEmail.valid">El e-mail es obligatorio<br></span>
 
 				<label for="amount"> MONTO EN $:</label><br>
-				<input type="number" class="form-control" name="amount" #amount="ngModel" [(ngModel)]="giftcard.amount" required />
-				<!-- --><br>
-				<span class="form_error" *ngIf="amount.touched && amount.pristine">El monto es obligatorio.</span>
+				<input type="number" class="form-control" name="amount" min="1" #amount="ngModel" [(ngModel)]="giftcard.amount" required />
+				<span class="form_error" *ngIf="amount.touched && !amount.valid">El monto es obligatorio.</span>
 
 
 				  </div>
@@ -81,7 +80,7 @@
 				    <label for="client">NOMBRE:</label>
 				<input type="text" class="form-control" name="client" #client="ngModel" [(ngModel)]="giftcard.client" required />
  				
- 				<span class="form_error" *ngIf="client.touched && !client.valid">El destinatario es obligatorio</span>
+ 				<span class="form_error" *ngIf="client.touched && !client.valid">El destinatario es obligatorio<br></span>
 
  				<label for="emailClient">E-MAIL:</label>
     								<input class="form-control" type="text" name="emailClient" #emailClient="ngModel"
@@ -89,9 +88,9 @@
     								<span class="form_error" *ngIf="emailClient.touched && !emailClient.valid">El email del destinatario es obligatorio</span>
 
 						<label for="phoneClient">TELÉFONO: </label><br>
-    								<input class="form-control" ty0pe="number" name="phoneClient" #phoneClient="ngModel"
-    									[(ngModel)]="giftcard.phoneClient" required min="1000000000" /><br>
-    								<span class="form_error" *ngIf="phoneClient.touched && !phoneClient.valid">El teléfono del destinatario es obligatorio</span>
+    								<input class="form-control" type="number" name="phoneClient" #phoneClient="ngModel"
+    									[(ngModel)]="giftcard.phoneClient" min="1000000000" required/><br>
+    								<span class="form_error" *ngIf="phoneClient.touched && !phoneClient.valid">El teléfono del destinatario está incompleto. Recuerda ingresa la característica.</span>
 				    
 				  </div>
 				</div>
@@ -99,7 +98,7 @@
 
 
 <div class="row justify-content-center m-1 p-2" id="">
-				  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop1" 
+				  <button type="button" [disabled]="!giftcardForm.form.valid" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop1" 
 				  id="btnCheckout"><i class='fa fa-shopping-cart' ></i><!--<i class='fa fa-shopping-basket'></i>--> Comprar </button>
 				
 

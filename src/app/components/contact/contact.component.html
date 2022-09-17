@@ -30,10 +30,19 @@
       
     </div>
     <div class="col align-items-center">
-       
-       <a class="btn btn-danger m-2 p-2" href="https://wa.link/hz2dvv" id="btnContact" style="margin-top: 0%!important;"><div class="text-center"><p>JUAN B. JUSTO<br> CIUDAD, MENDOZA<br><img src="https://res.cloudinary.com/dzyvb836r/image/upload/v1663041999/wp_ezckaz.png" style="width: 10%;"> +54 (9) 261-7-482680  </p></div></a><br>
+			<p class="m-2">CLICK EN LA SEDE DESEAS COMUNICARTE:</p><br>
 
- 		<a class="btn btn-danger m-2 p-2" href='https://wa.link/77akdc' id="btnContact" ><div class=" text-center  "  ><p>IL MERCATO<br> MAIPÚ, MENDOZA<br><img src="https://res.cloudinary.com/dzyvb836r/image/upload/v1663041999/wp_ezckaz.png" style="width: 10%;"> +54 (9) 261-6-291473 </p></div></a>
+       <p>JUAN B. JUSTO<br> CIUDAD, MENDOZA</p>
+       <a class="btn btn-danger m-1 p-2" href="https://wa.link/hz2dvv" id="btnContact"><div class="text-center"><p class="m-2"><img src="https://res.cloudinary.com/dzyvb836r/image/upload/v1663041999/wp_ezckaz.png" style="width: 10%;border-radius: 15px;"> +54 (9) 261-7-482680  </p></div></a><br><br>
+
+<p>IL MERCATO<br> MAIPÚ, MENDOZA</p>
+ 		<a class="btn btn-danger m-1 p-2" href='https://wa.link/77akdc' id="btnContact" ><div class=" text-center  "  ><p class="m-2"><img src="https://res.cloudinary.com/dzyvb836r/image/upload/v1663041999/wp_ezckaz.png" style="width: 10%;border-radius: 15px;"> +54 (9) 261-6-291473 </p></div></a>
+<br><br>
+
+<p>¿Deseas reportar un problema?</p>
+ 		<a class="btn btn-danger m-1 p-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop3" id="btnContact" ><i class='fa fa-hand-o-right'></i> Reportar</a>
+
+
     </div>
     <div class="col">
       
@@ -69,44 +78,7 @@ END PAGE CONTENT -->
 </div>
 </div>
 
-		<!-- Modal -->
-						<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-						  <div class="modal-dialog modal-dialog-centered">
-						    <div class="modal-content">
-						      <div class="modal-header">
-						        <h5 class="modal-title" id=""><i class='fas fa-door-open'></i> Saliendo del sitio</h5>
-
-						      
-						        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-						      </div>
-
-						      <div class="modal-body "  >
-						        <div class="modalConfirm" role="alert"  >
-
-
-													<p style=" text-align:left!important;"> Recuerda que para comprar <i class='fa fa-gift'></i> Giftcards deberas regresar a esta página web o escanear nuevamente el código QR. </p>
-
-
-
-
-								
-
-											
-								
-										</div>
-
-											<div class="modal-footer text-center">
-						       <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
-						       <!-- <button type="button" class="btn btn-primary">Understood</button>-->
-						      
-												 			 <a class="btn btn-outline-dark p-2" href="https://quierolacarta.com/local/95"  ><i class='fa fa-cutlery'> </i> Carta Digital</a>
-																		
-															</div>
-						      </div>
-						    </div>
-						  </div>
-						</div>
-
+		 
 
 
 
@@ -123,5 +95,93 @@ END PAGE CONTENT -->
 
 
 
+<!-- Modal -->
+            <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content" id="modalReport">
+                  <div class="modal-header">
+                    <h5 class="modal-title" style="color:white;" id=""><i class='fa fa-edit'></i> Crea un reporte:</h5>
+
+                  
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color:white!important">X</button>
+                  </div>
+
+                  <div class="modal-body row" >
+                    <div class="col-12" role="alert"  >
+
+                        <form class="form-control" #reportForm="ngForm" (ngSubmit)="reportarProblema(reportForm)" id="reportForm">
+                            <div id="emailHelp" class="form-text"> Por favor cuentanos en detalle tu problema para que podamos ayudarte.</div>
+                            
+                            <br>
+
+                            <div class="mb-3">
+                            <label for="name " class="form-label" ><strong> Nombre y apellido: </strong></label><br>
+                            <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="report.name" required />
+                            <span class="form_error" *ngIf="name.touched && !name.valid">El nombre es obligatorio.</span>
+                            </div>
+
+                            
+
+
+                              <div class="mb-3">
+                            <label for="description" class="form-label"><strong> Descripción: </strong></label><br>
+                            <textarea name="description" class="form-control" #description="ngModel"[(ngModel)]="report.description" required><br></textarea>
+                            <div id="emailHelp" class="form-text"> No olvides incluir el numero del ticket de mercado pago.</div>
+                           </div>
+                            
+                            <span class="form_error" *ngIf="description.touched && description.pristine">La descripción es obligatorio.</span>
+
+
+                            <div class="mb-3">
+                            <label for="date" class="form-label"> <strong>Fecha de compra: </strong></label><br>
+                            <input type="date" class="form-control" name="date" #date="ngModel" [(ngModel)]="report.date"
+                              required />
+                            <span class="form_error" *ngIf="date.touched && !date.valid">La fecha de compra es obligatoria.</span>
+                          </div>
+
+
+                            <div class="mb-3">
+                            <label for="emailClient" class="form-label"><strong> Email: </strong></label><br>
+                            <input type="text" class="form-control" name="emailClient" #emailClient="ngModel" [(ngModel)]="report.emailClient" required />
+                            
+
+                            <span class="form_error" *ngIf="emailClient.touched && !emailClient.valid">El e-mail es obligatorio.</span>
+                             </div>
+
+
+                            <div class="mb-3">
+                            <label for="phoneClient" class="form-label" ><strong> Teléfono del cliente: </strong></label><br>
+                            <input type="text" class="form-control" name="phoneClient" #phoneClient="ngModel" [(ngModel)]="report.phoneClient" required />
+                           
+
+
+                            <span class="form_error"  *ngIf="phoneClient.touched && phoneClient.pristine">El teléfono es obligatorio.</span>
+                            </div>
+
+                                  <br>
+
+                            <div class="d-flex justify-content-center"><button  class="btn btn-warning" type="submit"  [disabled]="!reportForm.form.valid"> <i class='fa fa-send-o'></i> Enviar </button></div>
+                            <br>
+                            
+                        
+
+                            
+                      
+                            
+
+
+                          </form>
+                                                                
+                       
+
+
+                  <!--<button class="btn btn-warning" (click)="entendidoMet()">Ok</button>-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+<!--FIN MODAL-->
 
 
