@@ -369,8 +369,13 @@ margin-top: 30%
 
 .form-control{
 height: 25px;
+border-color: black;
 
 
+}
+
+.form_error{
+  font-size: 10px;
 }
 
 #actorLabel{
@@ -462,8 +467,8 @@ background-size: cover;
 
 #btnContact{
  box-shadow: 10px 10px 5px black;
-border-radius: 25px;
-width: 250px;
+border-radius: 15px;
+width: 220px;
 background-color: rgba(176,40,42,0.8)!important;
 font-weight: bold;
 }
@@ -548,14 +553,21 @@ border-radius: 40px;
 
 #staticBackdrop{
 
-background-color: rgba(0, 0, 0,0.2)!important;
+background-color: rgba(0, 0, 0,1)!important;
 
+}
+#staticBackdrop3{
+
+background-color: rgba(0, 0, 0,1)!important;
+margin-top: 0%;
 }
 
 #modalReport{
 
   background-color: rgba(0, 0, 0,0.8)!important;
 color: white!important;
+border-color: black!important;
+
 }
 
 #btnShowRoom{
