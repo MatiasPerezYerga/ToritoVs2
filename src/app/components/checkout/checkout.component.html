@@ -50,7 +50,7 @@
 				  <div class="card-body">
 				    
 				    <label class="text-center" id="actorLabel"><b> COMPRADOR</b></label><br>
-				    	<label for="buyerName">NOMBRE: </label><br>
+				    	<label for="buyerName">NOMBRE: </label>
 				<input class="form-control" type="text" name="buyerName" #buyerName="ngModel" [(ngModel)]="giftcard.buyerName" required />
 				
 				<!--[(ngModel)]="project.name" 2 ways data binding para modificar el atributo name del project-->
@@ -76,7 +76,7 @@
 					<div class="card m-2" id="card">
 				  
 				  <div class="card-body" id="cardBody">
-				   <label class="card-title"id="actorLabel"><b> DESTINATARIO</b></label><br>  
+				   <label class="text-center"id="actorLabel"><b> DESTINATARIO</b></label><br>  
 				    <label for="client">NOMBRE:</label>
 				<input type="text" class="form-control" name="client" #client="ngModel" [(ngModel)]="giftcard.client" required />
  				
@@ -85,11 +85,11 @@
  				<label for="emailClient">E-MAIL:</label>
     								<input class="form-control" type="text" name="emailClient" #emailClient="ngModel"
     									[(ngModel)]="giftcard.emailClient" required />
-    								<span class="form_error" *ngIf="emailClient.touched && !emailClient.valid">El email del destinatario es obligatorio</span>
+    								<span class="form_error" *ngIf="emailClient.touched && !emailClient.valid">El email del destinatario es obligatorio <br></span>
 
 						<label for="phoneClient">TELÉFONO: </label><br>
     								<input class="form-control" type="number" name="phoneClient" #phoneClient="ngModel"
-    									[(ngModel)]="giftcard.phoneClient" min="1000000000" required/><br>
+    									[(ngModel)]="giftcard.phoneClient" min="1000000000" required/>
     								<span class="form_error" *ngIf="phoneClient.touched && !phoneClient.valid">El teléfono del destinatario está incompleto. Recuerda ingresa la característica.</span>
 				    
 				  </div>
@@ -188,7 +188,7 @@
 						       <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
 						       <!-- <button type="button" class="btn btn-primary">Understood</button>-->
 						      
-												 			<button  class="btn btn-outline-dark" type="submit" data-bs-dismiss="modal" [disabled]="!giftcardForm.form.valid"> <i class='fas fa-rocket me-2'></i> A Mercado Pago </button>
+												 			<button  class="btn btn-dark" type="submit" data-bs-dismiss="modal" [disabled]="!giftcardForm.form.valid"> <i class='fas fa-rocket me-2'></i> A Mercado Pago </button>
 
 																		<br>
 															</div>
