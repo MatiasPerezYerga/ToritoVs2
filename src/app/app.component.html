@@ -17,12 +17,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 
 <body  class="min-vh-100">
-<div  *ngIf="loader" class="text-center" id="loader" style="">
+<div  *ngIf="loaderService.loader" class="text-center" id="loader" style="">
 <div class="col-12 min-vh-100 d-flex align-items-center justify-content-center">
 
 <div class="text-primary" role="status">
   
-<img src="https://res.cloudinary.com/dzyvb836r/image/upload/v1656210951/9_tndsk3.gif" id="loaderTorito" ><br>
+<img src="https://res.cloudinary.com/dzyvb836r/image/upload/v1663636688/logo_torito_1_nteuzl.gif" id="loaderTorito" ><br>
 
 
 <p class="m-2 p-2 " style="color: white;">Cargando...</p>
@@ -34,7 +34,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </div>
 <!--Loader Div Ends-->
 
-<div class ="w-100" *ngIf="!loader">
+<div class ="w-100" *ngIf="!loaderService.loader">
 
 <!--Aca va el resto-->
 <div class="min-vh-100">

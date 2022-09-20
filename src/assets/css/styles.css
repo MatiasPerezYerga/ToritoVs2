@@ -14,14 +14,15 @@ z-index: 900px!important;
 }
 
 
+
+
 #loaderTorito{
 
-  filter:  invert(100%);
-  width:30%;
+  width:100%;
   border-radius: 20px;
-  box-shadow: 10px 10px 5px white;
+  box-shadow: 10px 10px 5px black;
   background-color: transparent;
-  border: 1px solid black;
+  border: 1px solid whitesmoke;
 
 }
 
@@ -240,6 +241,13 @@ width: 200px;
   background-position: center top;
   
   
+}
+
+
+#loaderToritoSeba{
+  
+ 
+
 }
 
 

@@ -1,7 +1,7 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import{Giftcard} from '../../models/giftcard';//sali del directorio de create , sali del directorio de compomnentes y entras al de modelos
 import{GiftcardService} from '../../services/giftcard.service';
-
+import {LoaderService} from '../../services/loader.service';
 import {get} from 'scriptjs';
 import{Global} from '../../services/global';
 import{HttpClient, HttpHeaders} from '@angular/common/http';
@@ -25,9 +25,10 @@ export class CheckoutComponent implements OnInit {
   public init_point: string;
   public urlTree: any;
   public confirmado:boolean;
-  public loader;
+ // @Output() loader = new EventEmitter<boolean>();
+  
 
-  constructor(private _giftcardService: GiftcardService,  private http: HttpClient, private router: Router,) { 
+  constructor(private _giftcardService: GiftcardService,  private http: HttpClient, private router: Router,private loaderService: LoaderService) { 
 
   
 
@@ -36,8 +37,11 @@ export class CheckoutComponent implements OnInit {
       this.init_point="";
       this.entendido=false;
       this.confirmado=false;
-      this.loader=false;
+      
       this.urlTree = this.router.parseUrl(this.router.url);
+
+        
+
 
         if(this.urlTree.queryParams['amount']){
         this.giftcard.amount = this.urlTree.queryParams['amount'];
@@ -136,7 +140,7 @@ entendidoMet():void{
 
 checkout(form:any){
 
-    this.loader=true;
+    this.loaderService.loader=true;
     console.log("LOADER HAS COMING BABY!");
         
     localStorage.setItem("buyerName",this.giftcard.buyerName);
@@ -158,7 +162,7 @@ checkout(form:any){
 
                //Loader variable set false after page load
             setTimeout(()=>{                           
-            this.loader = false;
+           this.loaderService.loader=false;
             }, 10000);
 
             },

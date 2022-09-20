@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { faClock } from '@fortawesome/free-solid-svg-icons';
 import { AuthService } from './services/auth.service';
@@ -8,7 +8,7 @@ import { faFilm } from '@fortawesome/free-solid-svg-icons';
 import { faFish } from '@fortawesome/free-solid-svg-icons';
 import{HttpClient, HttpHeaders} from '@angular/common/http';
 import {Router } from '@angular/router';
-
+import { LoaderService} from './services/loader.service';
 import { Observable } from 'rxjs';
 import { UserI } from './models/user';
 
@@ -20,16 +20,13 @@ import { UserI } from './models/user';
 })
 export class AppComponent {
 
-
-  title = 'torito';
-   loader=true;
-
-
  
+
    public user: string;
     public urlTree: any;
+  title = 'torito';
 
-   constructor(private http: HttpClient, private router: Router,public authSvc: AuthService){
+   constructor(private http: HttpClient, private router: Router,public authSvc: AuthService,public loaderService: LoaderService ){
 
      this.user="";
    
@@ -44,8 +41,8 @@ export class AppComponent {
     
      //Loader variable set false after page load
     setTimeout(()=>{                           
-      this.loader = false;
-  }, 2000);
+      this.loaderService.loader = false;
+  }, 3000);
   }
 
 
