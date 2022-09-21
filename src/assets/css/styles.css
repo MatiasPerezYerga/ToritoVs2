@@ -6,16 +6,12 @@
 }
 
 body{
-
-  
+  overflow-x: hidden!important;
+   overflow-y: hidden!important;
 background-color: black;
 }
 
-#bodyImage{
 
-  overflow-x: hidden!important;
-  overflow-y: hidden!important;
-}
 
 
 
@@ -1281,12 +1277,14 @@ font-size: 22px;
 
 @media  (max-width:425px) {
 
-
+#rowColumnContact{
+margin-top:6% ;
+}
 
 
 #ftr1{
-margin-top: -25%;
-
+margin-top: -20%!important;
+margin-bottom: 10%;
 }
 
 
