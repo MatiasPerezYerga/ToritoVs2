@@ -114,7 +114,7 @@ text-decoration: none!important;
 
 #ftr1{
 background-color: transparent;
-margin-top: -20%;
+margin-top: -15%;
 color: white;
 height: 50px;
 font-weight: bold;
@@ -349,6 +349,7 @@ background-image: url("https://res.cloudinary.com/dzyvb836r/image/upload/v166336
   background-position: center center;
   color: white;
   background-size: cover;
+  min-height: 100vh;
 
  
 }
