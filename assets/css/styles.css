@@ -15,7 +15,7 @@ body{
 #bodyImage{
 
 background-image: url("https://res.cloudinary.com/dzyvb836r/image/upload/v1662685094/BurguerTorito_lbiufc.jpg");
-background-position: center center;
+background-size: cover;
 }
 
 
