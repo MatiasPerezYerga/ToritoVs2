@@ -7,9 +7,14 @@
 
 body{
 
+  
+background-color: black;
+}
+
+#bodyImage{
+
   overflow-x: hidden!important;
   overflow-y: hidden!important;
-background-color: black;
 }
 
 
