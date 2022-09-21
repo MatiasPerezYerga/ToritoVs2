@@ -29,7 +29,7 @@
    
   </div>
 
-    <div class="container" style="height:auto!important; min-height: 554px!important;">
+    <div class="container" style="height:auto!important; min-height: 540px!important;">
  
 			<form class="text-center " #giftcardForm="ngForm" (ngSubmit)="checkout(giftcardForm)" id="formMP">
 
@@ -43,8 +43,6 @@
 				    	<label for="buyerName">NOMBRE: </label>
 				<input class="form-control" type="text" name="buyerName" #buyerName="ngModel" [(ngModel)]="giftcard.buyerName" required />
 				
-				<!--[(ngModel)]="project.name" 2 ways data binding para modificar el atributo name del project-->
-				<!-- el # indica que es la identificacion para Angular-->
 				<span class="form_error" *ngIf="buyerName.touched && !buyerName.valid">El nombre es
 					obligatorio<br></span>
 
@@ -80,7 +78,7 @@
 						<label for="phoneClient">TELÉFONO: </label><br>
     								<input class="form-control" type="number" name="phoneClient" #phoneClient="ngModel"
     									[(ngModel)]="giftcard.phoneClient" min="1000000000" required/>
-    								<span class="form_error" *ngIf="phoneClient.touched && !phoneClient.valid">El teléfono del destinatario está incompleto. Recuerda ingresa la característica.</span>
+    								<span class="form_error" *ngIf="phoneClient.touched && !phoneClient.valid">Obligatiorio. Ingresa la característica.</span>
 				    
 				  </div>
 				</div>
