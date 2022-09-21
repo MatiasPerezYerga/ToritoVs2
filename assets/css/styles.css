@@ -120,7 +120,7 @@ text-decoration: none!important;
 
 #ftr1{
 background-color: transparent;
-margin-top: -20%;
+margin-top: -25%;
 color: white;
 height: 50px;
 font-weight: bold;
@@ -1368,17 +1368,9 @@ font-size: 12px!important;
 
 
 
-}
-
-@media (max-width:360px) {
-  
-}
-
-@media (max-width:320px) {
-
+#ftr1{
+  margin-top: -35%!important;
 }
 
 
-@media (max-width: 1024px){
- 
 }
