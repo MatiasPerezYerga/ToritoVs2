@@ -1278,7 +1278,7 @@ font-size: 22px;
                         768 max 
 -------------------------------------------------------------------*/
 
-@media  (min-width:426px) and (max-width:768px) {
+@media  (max-width:426px) {
 
 #home{
 
@@ -1290,16 +1290,6 @@ font-size: 22px;
 width: 130px!important;
 
 }
-
-
-
-
-
-
-
-/*-------------------------------------------------------------------
-                        425 max 
--------------------------------------------------------------------*/
 
 
 
@@ -1331,8 +1321,11 @@ padding-left: 2%!important;
 /*width: 130%!important;*/
 }
 
+#checkoutGiftcard{
+  min-height: 800px!important;
+}
 #ftr1{
-  margin-top: -45%!important;
+  margin-top: -38!important;
 }
   
 
