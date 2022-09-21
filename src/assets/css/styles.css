@@ -12,6 +12,12 @@ body{
 
 }
 
+#bodyImage{
+
+background-image: url("https://res.cloudinary.com/dzyvb836r/image/upload/v1662685094/BurguerTorito_lbiufc.jpg");
+
+}
+
 
 #loader{
 
@@ -114,7 +120,7 @@ text-decoration: none!important;
 
 #ftr1{
 background-color: transparent;
-margin-top: -15%;
+margin-top: -20%;
 color: white;
 height: 50px;
 font-weight: bold;
