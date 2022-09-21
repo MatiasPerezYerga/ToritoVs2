@@ -16,6 +16,7 @@ body{
 
 background-image: url("https://res.cloudinary.com/dzyvb836r/image/upload/v1662685094/BurguerTorito_lbiufc.jpg");
 background-size: cover;
+ overflow-y: hidden!important;
 }
 
 
@@ -1291,37 +1292,16 @@ width: 130px!important;
 }
 
 
-}
 
 
 
-/*-------------------------------------------------------------------
-                        (min-width:426px) and 640 max 
--------------------------------------------------------------------*/
 
-
-@media (min-width:426px) and (max-width:640px) {
-
-#home{
-
-
-}  
-
-
-  
-}
 
 /*-------------------------------------------------------------------
                         425 max 
 -------------------------------------------------------------------*/
 
-@media (max-width:425px) {
 
-#myCarousel{
-margin-left: 3%!important;
-
-
-}
 
 .btnHome{
 
@@ -1350,6 +1330,10 @@ padding-left: 2%!important;
 
 /*width: 130%!important;*/
 }
+
+#ftr1{
+  margin-top: -45%!important;
+}
   
 
 
@@ -1368,9 +1352,7 @@ font-size: 12px!important;
 
 
 
-#ftr1{
-  margin-top: -35%!important;
-}
+
 
 
 }
