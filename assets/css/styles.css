@@ -9,15 +9,9 @@ body{
 
   overflow-x: hidden!important;
   overflow-y: hidden!important;
-
+background-color: black;
 }
 
-#bodyImage{
-
-background-image: url("https://res.cloudinary.com/dzyvb836r/image/upload/v1662685094/BurguerTorito_lbiufc.jpg");
-background-size: cover;
- overflow-y: hidden!important;
-}
 
 
 #loader{
@@ -404,7 +398,9 @@ border-color: black;
 
 .form_error{
   font-size: 10px;
-}
+  height: 10px;
+  }
+
 
 #actorLabel{
 font-size: 20px;
@@ -1278,70 +1274,13 @@ font-size: 22px;
                         768 max 
 -------------------------------------------------------------------*/
 
-@media  (max-width:426px) {
-
-#home{
-
-
-}
-
-
-#btnHomeSmall{
-width: 130px!important;
-
-}
+@media  (max-width:425px) {
 
 
 
-.btnHome{
-
-position: absolute!important;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-
-}
-
-.w3-image{
-
-  width: 847px!important;
-  height: 640px!important; 
-}
-
-
-#btnHomeSmall{
-  margin-left:10%!important ;
-
-padding-left: 2%!important;
-
-/*width: 130%!important;*/
-}
-
-#checkoutGiftcard{
-  min-height: 800px!important;
-}
-#ftr1{
-  margin-top: -38!important;
-}
-  
 
 
 
-}
-
-@media (max-width:375px) {
-
-
-#btnHomeSmall{
-  margin-left:10%!important ;
-
-padding-left: 2%!important;
-font-size: 12px!important;
-}
 
 
 
@@ -1349,3 +1288,4 @@ font-size: 12px!important;
 
 
 }
+
