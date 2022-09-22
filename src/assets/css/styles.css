@@ -356,6 +356,12 @@ background-image: url("https://res.cloudinary.com/dzyvb836r/image/upload/v166336
  
 }
 
+#containerCheck{
+height:auto;
+ min-height: 657px;
+
+}
+
 
 #btnCheckout{
 
@@ -578,21 +584,20 @@ border-radius: 40px;
 
 #staticBackdrop{
 
-background-color: rgba(0, 0, 0,1)!important;
+background-color: rgba(0, 0, 0,0.6)!important;
 
 }
 #staticBackdrop3{
 
-background-color: rgba(0, 0, 0,1)!important;
+background-color: rgba(0, 0, 0,0.6)!important;
 margin-top: 0%;
 }
 
 #modalReport{
 
-  background-color: rgba(0, 0, 0,0.8)!important;
+  background-color: rgba(0, 0, 0,0.3)!important;
 color: white!important;
 border-color: black!important;
-
 }
 
 #btnShowRoom{
@@ -608,7 +613,7 @@ box-shadow: 5px 5px 5px black;
 #reportForm{
 font-size: 12px;
 background-color: rgba(0, 0, 0,0.3)!important;
-color: white!important;
+
 
 }
 
@@ -1267,9 +1272,84 @@ font-size: 22px;
 
   
 }
+/*-------------------------------------------------LANDSCAPE ------------------------------------------*/
+
+@media  (max-width:1024px) and (orientation:landscape) {
+
+
+#ftr1{
+  margin-top: -15%;
+  padding-bottom: 10%;
+}
+
+#rowColumnContact{
+ 
+  min-height: 110vh;
+}
+
+#ToritoLogo{
+width: 13%;
+
+}
+
+
+}
+
+
+@media  (max-width:760px) and (orientation:landscape) {
 
 
 
+
+#ToritoLogo{
+width: 13%;
+
+}
+
+#ftr1{
+  margin-top: -8%;
+  padding-bottom: 10%;
+}
+
+#icoHome{
+width: 8%;
+margin-top: 2%;
+}
+
+#rowGiftcard{
+margin-top: 15% ;
+
+}
+
+#containerCheck{
+height:auto;
+ min-height: 720px;
+
+}
+
+#rowColumnContact{
+  
+  min-height: 170vh;
+}
+
+
+}
+
+
+
+
+@media  (max-width:684px) and (orientation:landscape) {
+
+#ftr1{
+  margin-top: -10%;
+  padding-bottom: 10%;
+}
+#rowColumnContact{
+ 
+  min-height: 195vh;
+}
+
+}
 
 /*-------------------------------------------------------------------
                         768 max 
