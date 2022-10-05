@@ -55,8 +55,10 @@ export class AuthService {
   login(user: UserI): Observable<JwtResponseI> {
     return this.httpClient.post<JwtResponseI>(`${this.AUTH_SERVER}/login`,
       user).pipe(tap(
+        
         (res: JwtResponseI) => {
-console.log(res);
+          
+          console.log(res);
 
           if (res) {
                   
@@ -98,17 +100,24 @@ console.log(res);
   }
 
   private saveToken(token: string, expiresIn: string,usersesion: string): void {
-    localStorage.setItem("ACCESS_TOKEN", token);
-    localStorage.setItem("EXPIRES_IN", expiresIn);
-    localStorage.setItem("USERSESION",usersesion);
+    sessionStorage.setItem("ACCESS_TOKEN", token);
+    sessionStorage.setItem("EXPIRES_IN", expiresIn);
+    sessionStorage.setItem("USERSESION",usersesion);
     this.token = token;
+
+//That is, the data stored in localStorage persists until explicitly deleted. Changes made are saved and available for all current and future visits to the site.
+
+//For sessionStorage, changes are only available per tab. Changes made are saved and available for the current page in that tab until it is closed. Once it is closed, the stored data is deleted.
+
+
+
   }
 
 
 
   private getToken(): string {
     if (!this.token) {
-      this.token = localStorage.getItem("ACCESS_TOKEN");
+      this.token = sessionStorage.getItem("ACCESS_TOKEN");
     }
     return this.token;
   }
@@ -117,7 +126,7 @@ console.log(res);
 
     loggedIn(): boolean{
 
-    return !!localStorage.getItem('ACCESS_TOKEN');
+    return !!sessionStorage.getItem('ACCESS_TOKEN');
 
     }
 
