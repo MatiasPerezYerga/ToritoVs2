@@ -30,9 +30,9 @@ export class AppComponent {
 
      this.user="";
    
-     if(localStorage.getItem("USERSESION")){
-              this.user=(localStorage.getItem("USERSESION") || '{}');
-              console.log(localStorage.getItem("USERSESION"));
+     if(sessionStorage.getItem("USERSESION")){
+              this.user=(sessionStorage.getItem("USERSESION") || '{}');
+              console.log(sessionStorage.getItem("USERSESION"));
               console.log("El usuario desde el component es:"+this.user);
        }
      }

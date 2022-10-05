@@ -87,9 +87,9 @@ export class AuthService {
 
     this.authSubject.next(false);
     this.token = '';
-    localStorage.removeItem("ACCESS_TOKEN");
-    localStorage.removeItem("EXPIRES_IN");
-    localStorage.removeItem("USERSESION");
+    sessionStorage.removeItem("ACCESS_TOKEN");
+    sessionStorage.removeItem("EXPIRES_IN");
+    sessionStorage.removeItem("USERSESION");
     
 //set userIsLogged= false  Es una propiedad para indicar que deslogeo
     
