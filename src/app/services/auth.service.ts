@@ -154,7 +154,7 @@ if(!this.helper.isTokenExpired(token)){
    sessionStorage.removeItem("ACCESS_TOKEN");
     sessionStorage.removeItem("EXPIRES_IN");
     sessionStorage.removeItem("USERSESION");
-   window.location.href = "http://localhost:4200/login"
+   window.location.href = "https://matiasperezyerga.github.io/ToritoVs2/login"
     
     
 
