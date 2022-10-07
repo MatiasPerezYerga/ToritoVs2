@@ -23,17 +23,23 @@ export class AppComponent {
  
 
    public user: string;
+   public expireIn: string;
     public urlTree: any;
   title = 'torito';
 
    constructor(private http: HttpClient, private router: Router,public authSvc: AuthService,public loaderService: LoaderService ){
 
      this.user="";
+     this.expireIn="";
    
      if(sessionStorage.getItem("USERSESION")){
               this.user=(sessionStorage.getItem("USERSESION") || '{}');
               console.log(sessionStorage.getItem("USERSESION"));
               console.log("El usuario desde el component es:"+this.user);
+              
+              this.expireIn = (sessionStorage.getItem("EXPIRES_IN") || '{}');  
+
+                console.log("El expireIn desde el component es:"+this.expireIn);
        }
      }
 

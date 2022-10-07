@@ -11,6 +11,7 @@ import {Observable, BehaviorSubject} from 'rxjs';
 
 //Importamos el router
 import { Router } from '@angular/router';
+import { JwtHelperService } from "@auth0/angular-jwt";
 
 @Injectable({  providedIn: 'root'})
 
@@ -25,6 +26,7 @@ export class AuthService {
   AUTH_SERVER: string = 'https://api-torito-giftcard-nodejs.herokuapp.com/api';
   authSubject = new BehaviorSubject(false);
   private token: any;
+  private helper = new JwtHelperService();
   //private Desol= new BehaviorSubject(false);
 
  /* get isLogged(): Observable<boolean>{
@@ -72,6 +74,9 @@ export class AuthService {
            
               console.log("El authSubject en la respuesta del login es: " + this.authSubject);
              console.log(this.authSubject);
+             console.log("ACA VA EL EXPIRE");
+             console.log(res.dataUser.expiresIn);
+
             
 
 
@@ -119,17 +124,55 @@ export class AuthService {
 
   private getToken(): string {
     if (!this.token) {
-      this.token = sessionStorage.getItem("ACCESS_TOKEN");
+      this.token = sessionStorage.getItem(("ACCESS_TOKEN") || '{}');
+
     }
     return this.token;
   }
+
  //FALTA EL CHECK TOKEN PARA VERIFICAR EL TIEMPO DE EXPIRACION... tIME 1 H 37 MIN ANGULAR LOGIN USER TUTORIAL ESPAÑOL
  /* tambien podemos escribir en una sola linea*/
 
-    loggedIn(): boolean{
+    loggedIn(): any{
+    
+    const token = this.getToken();
+    console.log("Debugging Logged")
+    console.log(token);
+    console.log("El token está expirado??");
+    console.log(this.helper.isTokenExpired(token));
+    const expirationDate = this.helper.getTokenExpirationDate(token);
 
-    return !!sessionStorage.getItem('ACCESS_TOKEN');
+    console.log(expirationDate);
+    console.log(Date())
 
+if(!this.helper.isTokenExpired(token)){
+ return !this.helper.isTokenExpired(token);
+
+}else{
+  console.log("que paso ?");
+   this.authSubject.next(false);
+   sessionStorage.removeItem("ACCESS_TOKEN");
+    sessionStorage.removeItem("EXPIRES_IN");
+    sessionStorage.removeItem("USERSESION");
+   window.location.href = "http://localhost:4200/login"
+    
+    
+
+    /*setTimeout(()=>{                           
+      
+      
+  }, 1000);*/
+}
+
+    
+    
+
+
+    //return !this.helper.isTokenExpired();
+   
+
+
+    
     }
 
  /*!!localStorage.getItem('token');*/

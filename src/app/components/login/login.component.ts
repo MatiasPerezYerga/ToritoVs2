@@ -25,7 +25,7 @@ onLogin(form: any): void {
     this.authService.login(form.value).subscribe(res => {
 
      //this.router.navigateByUrl('/giftcards?authSubject=true');// Si el usuario puede hacer login lo redireccionamos ahi.
-       window.location.href = "https://matiasperezyerga.github.io/ToritoVs2/giftcards?authSubject=true";
+       window.location.href = "http://localhost:4200/giftcards?authSubject=true";
       //DEBERIA AGREGAR ALGO AL LOGIN NEGADO
     });
   }
